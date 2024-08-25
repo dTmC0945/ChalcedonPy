@@ -1,0 +1,40 @@
+axes.edgecolor: 1e1e2e,
+axes.facecolor: 363a4f,
+axes.axisbelow : True,
+axes.labelcolor : cad3f5,
+axes.grid: True,
+axes.grid.which: both,
+axes.spines.left: False,
+axes.spines.right: False
+axes.spines.top: False
+axes.spines.bottom: False
+axes.prop_cycle: cycler(color=new_colours)
+
+grid.color: 5b6078
+grid.linewidth: 1.2
+
+xtick.color: cad3f5
+xtick.major.bottom: True
+xtick.labelsize: 10
+xtick.minor.bottom: True
+xtick.minor.visible: True
+xtick.minor.width: 0.5
+
+ytick.color: cad3f5
+ytick.major.left: True
+ytick.minor.left: False
+ytick.minor.visible: True
+ytick.labelsize: 10
+
+savefig.facecolor: 363a4f
+
+text.color: cad3f5
+
+lines.linewidth: 4
+
+font.size: 16
+
+legend.fancybox : False
+legend.facecolor : 6c7086
+
+figure.facecolor: 838ba7

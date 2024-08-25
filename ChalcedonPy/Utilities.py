@@ -3,6 +3,8 @@ from cycler import cycler
 from pathlib import Path # to work with paths
 import matplotlib.colors  # all related to colours
 
+SAVE_PATH=""
+
 # define a function to store matplotlib style information
 def plot_settings(style, size):
 
@@ -149,7 +151,7 @@ def grid_settings(style):
    plt.minorticks_on()
 
 def store_fig(fig_id,
-              filepath = None,
+              SAVE_PATH = None,
               tight_layout=True,
               fig_extension="png",
               resolution=400,
@@ -171,7 +173,7 @@ def store_fig(fig_id,
         plt.grid(which='major', color='#c8c8c8', linestyle=':', linewidth=0.8)
         fig_extension = "pdf"
 
-    IMAGES_PATH = Path() / "images" / filepath
+    IMAGES_PATH = Path() / "images" / SAVE_PATH
         
     path = IMAGES_PATH / f"{fig_id}.{fig_extension}"
     plt.savefig(path, format=fig_extension, dpi=resolution)
