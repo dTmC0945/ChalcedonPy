@@ -1,3 +1,4 @@
 **/build/**
 **/ChalcedonPy.egg-info/**
 **/dist/**
+**/__pycache__/**
