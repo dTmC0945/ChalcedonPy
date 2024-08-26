@@ -4,6 +4,18 @@ from pathlib import Path # to work with paths
 import matplotlib.colors  # all related to colours
 
 def init(save_path):
+   """Generates variables for use in the module
+
+   Parameters
+   ----------
+   save_path : string
+       The folder in which the images would be saved
+
+   Examples
+   --------
+   cp.init("Mathematical-Fundamentals")
+
+   """
    global SAVE_PATH
    SAVE_PATH = save_path
    

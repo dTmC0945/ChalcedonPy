@@ -20,9 +20,13 @@ xtick.minor.bottom: True
 xtick.minor.visible: True
 xtick.minor.width: 0.5
 
+grid.linestyle: :
+grid.linewidth: 0.5
+
+
 ytick.color: cad3f5
 ytick.major.left: True
-ytick.minor.left: False
+ytick.minor.left: True
 ytick.minor.visible: True
 ytick.labelsize: 10
 
@@ -32,7 +36,7 @@ text.color: cad3f5
 
 lines.linewidth: 4
 
-font.size: 16
+font.size: 12
 
 legend.fancybox : False
 legend.facecolor : 6c7086
