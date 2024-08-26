@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 from cycler import cycler 
 from pathlib import Path # to work with paths
 import matplotlib.colors  # all related to colours
+import os, glob, sys, pikepdf
+
 
 def init(save_path, display_mode):
    """Generates variables for use in the module
@@ -56,22 +58,22 @@ def store_fig(fig_id,
    cp.store_fig("An Example", close=True)
    """
     
-    if tight_layout:
+   if tight_layout:
         plt.tight_layout()
         
-    if style == "web":
+   if style == "web":
         fig_extension = "png"
         
-    elif style == 'slide':
+   elif style == 'slide':
         fig_extension = "pdf"
 
-    IMAGES_PATH = Path() / "images" / SAVE_PATH
+   IMAGES_PATH = Path() / "images" / SAVE_PATH
         
-    path = IMAGES_PATH / f"{fig_id}.{fig_extension}"
-    plt.savefig(path, format=fig_extension, dpi=resolution)
+   path = IMAGES_PATH / f"{fig_id}.{fig_extension}"
+   plt.savefig(path, format=fig_extension, dpi=resolution)
 
-    if close:
-        plt.close()
+   if close:
+      plt.close()
 
 
 class Plotting:
@@ -195,3 +197,20 @@ class Plotting:
         axes_rm_borders.tick_params(which='both', size=0, labelsize=0)
         axes_rm_borders.grid(which='major', color='#DDDDDD', linewidth=0.05)
         axes_rm_borders.grid(which='minor', color='#DDDDDD', linewidth=0.05)
+
+
+def PDFDecryptor(folder_path):
+
+    folder = Path(folder_path)
+    PDFFiles = folder.glob("**/*.pdf")
+
+    for pdf_file in PDFFiles:
+        pdf = pikepdf.open(pdf_file,
+                           password=sys.argv[1])
+        pdf_dec = str(pdf_file).replace('.pdf', '_dec.pdf')
+        print("Decrypted ->", pdf_file)
+        pdf.save(pdf_dec)
+
+        # Removes the encrypted lecture material
+        os.remove(pdf_file)
+        os.rename(pdf_dec, pdf_file)
