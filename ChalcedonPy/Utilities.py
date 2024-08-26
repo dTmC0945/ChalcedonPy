@@ -36,6 +36,25 @@ def store_fig(fig_id,
               fig_extension="png",
               resolution=400,
               close=None):
+   """Function to save a figure
+
+   Parameters
+   ----------
+   fig_id : string
+       name of the figure
+   tight_layout : bool
+       Set whether figure is tight
+   fig_extension : string
+       set the figure extension
+   resolution : int
+       Set the DPI
+   close : bool
+       Set to close the figure or not
+
+   Examples
+   --------
+   cp.store_fig("An Example", close=True)
+   """
     
     if tight_layout:
         plt.tight_layout()
