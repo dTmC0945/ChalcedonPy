@@ -1,14 +1,14 @@
-axes.edgecolor: 1e1e2e,
-axes.facecolor: 363a4f,
-axes.axisbelow : True,
-axes.labelcolor : cad3f5,
-axes.grid: True,
-axes.grid.which: both,
-axes.spines.left: False,
+axes.edgecolor: 1e1e2e
+axes.facecolor: 363a4f
+axes.axisbelow : True
+axes.labelcolor : cad3f5
+axes.grid: True
+axes.grid.which: both
+axes.spines.left: False
 axes.spines.right: False
 axes.spines.top: False
 axes.spines.bottom: False
-axes.prop_cycle: cycler(color=new_colours)
+axes.prop_cycle: cycler('color', ['326199','4fb1a1','fcc055','eb8d50','df6e5b','9a031e','984ea3'])
 
 grid.color: 5b6078
 grid.linewidth: 1.2
