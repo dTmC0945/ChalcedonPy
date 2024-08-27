@@ -11,7 +11,6 @@ axes.spines.bottom: False
 axes.prop_cycle: cycler('color', ['326199','4fb1a1','fcc055','eb8d50','df6e5b','9a031e','984ea3'])
 
 grid.color: 5b6078
-grid.linewidth: 1.2
 
 xtick.color: cad3f5
 xtick.major.bottom: True
